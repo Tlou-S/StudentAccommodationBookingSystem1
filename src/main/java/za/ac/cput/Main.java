@@ -9,12 +9,12 @@ public class Main {
     public static void main(String[] args) {
 
         ContactDetails contactDetails = new ContactDetails.Builder()
-                .setStudentEmail("Sethu@gmail.com")
+                .setStudentEmail("sethu@gmail.com")
                 .setPhone("0824537952")
                 .build();
 
         Address address = new Address.Builder()
-                .setPostalCode("1242")
+                .setPostalCode("741B")
                 .setCity("Hazyview")
                 .setStreet("Salubindza")
                 .build();

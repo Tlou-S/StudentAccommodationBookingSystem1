@@ -1,15 +1,18 @@
 package za.ac.cput.factory;
-import org.apache.commons.validator.routines.EmailValidator;
 import za.ac.cput.domain.*;
+import za.ac.cput.util.Helper;
 
 public class StudentFactory {
 
     public static Student createStudent(String studentNumber, String studentName, GenderType studentGender, Address address, ContactDetails contactDetails) {
-
-        EmailValidator validator = EmailValidator.getInstance();
-        boolean isValidEmail= validator.isValid(contactDetails.getStudentEmail());
-        if (isValidEmail == false) {
-            return null;
+        if ((Helper.isNullOrEmpty(studentNumber)) || (Helper.isNullOrEmpty(studentName))) {
+            System.out.println("Student number or name is null or empty");
+        }
+        if (!Helper.isValidEmail(contactDetails.getStudentEmail())){
+            System.out.println("Invalid email address");
+        }
+        if (Helper.isValidPostalCode((contactDetails.getStudentEmail()))){
+            System.out.println("Invalid postal code");
         }
 
         return new Student.Builder()
@@ -20,5 +23,6 @@ public class StudentFactory {
                 .setAddress(address)
                 .build();
     }
+
 
 }
