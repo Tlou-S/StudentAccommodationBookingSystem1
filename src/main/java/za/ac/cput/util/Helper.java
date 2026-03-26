@@ -1,14 +1,14 @@
 package za.ac.cput.util;
-
+import java.util.UUID;
 import org.apache.commons.validator.routines.EmailValidator;
 
 public class Helper {
 
     public static boolean isNullOrEmpty(String str) {
-       if ((str == null) || (str.isEmpty() )) {
+        if ((str == null) || (str.isEmpty())) {
             return true;
-       }
-       return false;
+        }
+        return false;
     }
 
     public static boolean isValidEmail(String email) {
@@ -29,8 +29,13 @@ public class Helper {
         }
         return true;
     }
+
     public static boolean isValidPostalCode(String postalCode) {
         if (isNullOrEmpty(postalCode)) return false;
         return postalCode.matches("\\d{4}");
+    }
+
+    public static String generateId() {
+        return UUID.randomUUID().toString();
     }
 }
