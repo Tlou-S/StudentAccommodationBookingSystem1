@@ -67,6 +67,11 @@ public class StudentRepository implements IStudentRepository {
     }
 
     @Override
+    public List<Student> getAll() {
+        return List.of();
+    }
+
+    @Override
     public List<Student> getAllStudents() {
         return studentList;
     }

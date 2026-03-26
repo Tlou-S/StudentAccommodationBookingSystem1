@@ -1,4 +1,10 @@
 package za.ac.cput.repository;
+/**
+ * BookingRepositoryTest.java
+ * Creating Test
+ * Author: Tlou Masebe (230128521)
+ * Date: 26 March 2026
+ */
 
 import org.junit.jupiter.api.*;
 import za.ac.cput.domain.*;
