@@ -7,7 +7,7 @@ import za.ac.cput.util.Helper;
 
 public class RoomFactory {
 
-    public static Room create(String roomId, String floor, String roomNumber, double pricePerMonth, RoomStatus roomStatus) {
+    public static Room createRoom(String roomId, String floor, String roomNumber, double pricePerMonth, RoomStatus roomStatus) {
         if ((Helper.isNullOrEmpty(roomId)) || (Helper.isNullOrEmpty(floor) || (Helper.isNullOrEmpty(roomNumber)))){
             return null;
         }
