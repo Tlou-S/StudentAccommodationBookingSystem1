@@ -1,4 +1,10 @@
 package za.ac.cput.factory;
+/**
+ * BookingFactory.java
+ * creating  Booking objects
+ * Author: Tlou Masebe (230128521)
+ * Date: 25 March 2026
+ */
 
 import za.ac.cput.domain.Booking;
 import za.ac.cput.domain.BookingStatus;

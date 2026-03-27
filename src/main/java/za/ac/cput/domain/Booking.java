@@ -1,5 +1,12 @@
 package za.ac.cput.domain;
 
+/**
+ * Booking.java
+ * using Builder Pattern
+ * Author: Tlou Masebe (230128521)
+ * Date: 24 March 2026
+ */
+
 import java.time.LocalDate;
 
 public class Booking {
