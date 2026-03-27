@@ -3,8 +3,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import za.ac.cput.domain.GenderType;
-import za.ac.cput.factory.AccomodationFactory;
 import za.ac.cput.domain.Accomodation;
 import za.ac.cput.domain.AccomodationStatus;
 import za.ac.cput.domain.Address;
