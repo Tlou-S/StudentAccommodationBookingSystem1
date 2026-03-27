@@ -6,11 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RoomTypeRepository implements IRoomTypeRepository {
-    private static IRoomRepository repository = null;
+    private static IRoomTypeRepository repository = null;
     private List<RoomType> roomTypeList;
 
     private RoomTypeRepository() {
         roomTypeList = new ArrayList<>();
+    }
+
+    public static IRoomTypeRepository getInstance() {
+        if (repository == null) {
+            repository = new RoomTypeRepository();
+        }
+        return repository;
+
     }
 
     @Override
@@ -43,7 +51,7 @@ public class RoomTypeRepository implements IRoomTypeRepository {
         if (!success) {
             return roomType;
         }
-        if (roomTypeList.add(roomType)){
+        if (roomTypeList.add(roomType)) {
             return roomType;
         }
         return null;
