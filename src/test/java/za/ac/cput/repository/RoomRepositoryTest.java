@@ -17,7 +17,7 @@ public class RoomRepositoryTest {
     @BeforeAll
     static void setup() {
 
-        Room room = new RoomFactory().createRoom(
+         room = new RoomFactory().createRoom(
                 "101",
                 "4",
                 "A122",
